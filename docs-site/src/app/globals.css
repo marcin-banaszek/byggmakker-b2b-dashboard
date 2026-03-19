@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "../styles/globals-tokens.css";
+
+@source "../components";
+@source "../app";
+
+body {
+  background-color: var(--surface-base-accent);
+  color: var(--text-neutral-base);
+}

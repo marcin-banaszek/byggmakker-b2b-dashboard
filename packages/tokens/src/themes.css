@@ -1,0 +1,90 @@
+@layer base {
+  :root {
+    /* Compatibility aliases for historical token typos */
+    --colors-brand-byggmakker-800: var(--colors-brand-bygmakker-800);
+    --icons-neutral-black: var(--icons-nautral-black);
+    --icons-neutral-base: var(--icons-nautral-base);
+    --icons-neutral-light: var(--icons-nautral-light);
+    --icons-neutral-disabled: var(--icons-nautral-disabled);
+    --icons-neutral-white: var(--icons-nautral-white);
+
+    --solid-outlet-outlet: var(--colors-helpers-yellow-500);
+    --solid-primary-accent: var(--colors-brand-orange-600);
+    --solid-primary-base: var(--colors-brand-orange-800);
+    --solid-primary-hover: var(--colors-brand-orange-900);
+    --solid-primary-pressed: var(--colors-brand-orange-1000);
+    --solid-secondary-base: var(--colors-brand-purple-1000);
+    --solid-secondary-hover: var(--colors-brand-purple-1100);
+    --solid-secondary-pressed: var(--colors-brand-purple-1200);
+    --solid-secondary-accent: var(--colors-brand-purple-800);
+    --borders-base-base: var(--colors-neutrals-300);
+    --borders-base-hover: var(--colors-neutrals-400);
+    --borders-base-pressed: var(--colors-neutrals-500);
+    --borders-base-disabled: var(--colors-neutrals-500);
+    --surface-base-accent: var(--colors-neutrals-200);
+    --surface-base-base: var(--colors-neutrals-100);
+    --surface-base-hover: var(--colors-neutrals-200);
+    --surface-base-pressed: var(--colors-neutrals-300);
+    --surface-base-darker: var(--colors-neutrals-400);
+    --text-neutral-black: var(--colors-neutrals-1100);
+    --text-neutral-base: var(--colors-neutrals-900);
+    --text-neutral-disabled: var(--colors-neutrals-500);
+    --text-neutral-light: var(--colors-neutrals-700);
+    --text-neutral-white: var(--colors-neutrals-100);
+    --icons-primary-default: var(--colors-brand-orange-800);
+    --status-error: var(--colors-helpers-red-900);
+    --status-success: var(--colors-helpers-green-800);
+    --status-warning: var(--colors-helpers-yellow-600);
+    --status-info: var(--colors-helpers-blue-900);
+  }
+
+  .theme-k-rauta {
+    --solid-primary-base: var(--colors-brand-orange-600);
+    --solid-secondary-base: var(--colors-brand-purple-1000);
+  }
+
+  .theme-k-bygg {
+    --solid-primary-base: var(--colors-brand-kbygg-1000);
+  }
+
+  .theme-byggmakker {
+    --solid-primary-base: var(--colors-brand-bygmakker-800);
+    --solid-secondary-base: var(--colors-brand-teal-700);
+  }
+}
+
+@theme {
+  --color-solid-outlet-outlet: var(--solid-outlet-outlet);
+  --color-solid-primary-accent: var(--solid-primary-accent);
+  --color-solid-primary-base: var(--solid-primary-base);
+  --color-solid-primary-hover: var(--solid-primary-hover);
+  --color-solid-primary-pressed: var(--solid-primary-pressed);
+  --color-solid-secondary-base: var(--solid-secondary-base);
+  --color-solid-secondary-hover: var(--solid-secondary-hover);
+  --color-solid-secondary-pressed: var(--solid-secondary-pressed);
+  --color-solid-secondary-accent: var(--solid-secondary-accent);
+  --color-borders-base-base: var(--borders-base-base);
+  --color-borders-base-hover: var(--borders-base-hover);
+  --color-borders-base-pressed: var(--borders-base-pressed);
+  --color-borders-base-disabled: var(--borders-base-disabled);
+  --color-surface-base-accent: var(--surface-base-accent);
+  --color-surface-base-base: var(--surface-base-base);
+  --color-surface-base-hover: var(--surface-base-hover);
+  --color-surface-base-pressed: var(--surface-base-pressed);
+  --color-surface-base-darker: var(--surface-base-darker);
+  --color-text-neutral-black: var(--text-neutral-black);
+  --color-text-neutral-base: var(--text-neutral-base);
+  --color-text-neutral-disabled: var(--text-neutral-disabled);
+  --color-text-neutral-light: var(--text-neutral-light);
+  --color-text-neutral-white: var(--text-neutral-white);
+  --color-icons-primary-default: var(--icons-primary-default);
+  --color-icons-neutral-black: var(--icons-neutral-black);
+  --color-icons-neutral-base: var(--icons-neutral-base);
+  --color-icons-neutral-light: var(--icons-neutral-light);
+  --color-icons-neutral-disabled: var(--icons-neutral-disabled);
+  --color-icons-neutral-white: var(--icons-neutral-white);
+  --color-status-error: var(--status-error);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-info: var(--status-info);
+}

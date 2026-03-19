@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@import "./globals-tokens.css";
+
+/* Scan shared design system package so its utility classes are included */
+@source "../../../packages/react/src/**/*.{js,ts,jsx,tsx}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Solid / Primary & Secondary — using direct primitive refs for Byggmakker theme */
+  --color-solid-outlet-outlet: var(--solid-outlet-outlet);
+  --color-solid-primary-accent: var(--colors-brand-bygmakker-600);
+  --color-solid-primary-base: var(--colors-brand-bygmakker-800);
+  --color-solid-primary-hover: var(--colors-brand-bygmakker-900);
+  --color-solid-primary-pressed: var(--colors-brand-bygmakker-1000);
+  --color-solid-secondary-base: var(--colors-brand-teal-1000);
+  --color-solid-secondary-hover: var(--colors-brand-teal-1100);
+  --color-solid-secondary-pressed: var(--colors-brand-teal-1200);
+  --color-solid-secondary-accent: var(--colors-brand-teal-800);
+
+  /* Borders */
+  --color-borders-base-base: var(--borders-base-base);
+  --color-borders-base-hover: var(--borders-base-hover);
+  --color-borders-base-pressed: var(--borders-base-pressed);
+  --color-borders-base-disabled: var(--borders-base-disabled);
+  --color-borders-white-white: var(--borders-white-white);
+  --color-borders-white-hover: var(--borders-white-hover);
+  --color-borders-white-pressed: var(--borders-white-pressed);
+  --color-borders-white-disabled: var(--borders-white-disabled);
+  --color-borders-color-error: var(--borders-color-error);
+  --color-borders-color-info: var(--borders-color-info);
+  --color-borders-color-success: var(--borders-color-success);
+  --color-borders-color-warning: var(--borders-color-warning);
+
+  /* Surface */
+  --color-surface-base-accent: var(--surface-base-accent);
+  --color-surface-base-base: var(--surface-base-base);
+  --color-surface-base-hover: var(--surface-base-hover);
+  --color-surface-base-pressed: var(--surface-base-pressed);
+  --color-surface-base-disabled: var(--surface-base-disabled);
+  --color-surface-base-darker: var(--surface-base-darker);
+  --color-surface-helpers-error: var(--surface-helpers-error);
+  --color-surface-helpers-info: var(--surface-helpers-info);
+  --color-surface-helpers-success: var(--surface-helpers-success);
+  --color-surface-helpers-warning: var(--surface-helpers-warning);
+  --color-surface-primary-base: var(--colors-brand-bygmakker-200);
+  --color-surface-primary-hover: var(--colors-brand-bygmakker-300);
+  --color-surface-primary-pressed: var(--colors-brand-bygmakker-400);
+  --color-surface-secondary-base: var(--colors-brand-teal-200);
+  --color-surface-secondary-hover: var(--colors-brand-teal-300);
+  --color-surface-secondary-pressed: var(--colors-brand-teal-400);
+
+  /* Status */
+  --color-status-error: var(--status-error);
+  --color-status-info: var(--status-info);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+
+  /* Text */
+  --color-text-neutral-black: var(--text-neutral-black);
+  --color-text-neutral-base: var(--text-neutral-base);
+  --color-text-neutral-disabled: var(--text-neutral-disabled);
+  --color-text-neutral-light: var(--text-neutral-light);
+  --color-text-neutral-white: var(--text-neutral-white);
+  --color-text-helpers-error: var(--text-helpers-error);
+  --color-text-helpers-info: var(--text-helpers-info);
+  --color-text-helpers-success: var(--text-helpers-success);
+  --color-text-helpers-warning: var(--text-helpers-warning);
+  --color-text-link-link: var(--text-link-link);
+  --color-text-link-hover: var(--text-link-hover);
+  --color-text-link-pressed: var(--text-link-pressed);
+  --color-text-link-base: var(--text-link-base);
+
+  /* Icons */
+  --color-icons-nautral-black: var(--icons-nautral-black);
+  --color-icons-nautral-base: var(--icons-nautral-base);
+  --color-icons-nautral-light: var(--icons-nautral-light);
+  --color-icons-nautral-disabled: var(--icons-nautral-disabled);
+  --color-icons-nautral-white: var(--icons-nautral-white);
+  --color-icons-icon-error: var(--icons-icon-error);
+  --color-icons-icon-info: var(--icons-icon-info);
+  --color-icons-icon-success: var(--icons-icon-success);
+  --color-icons-icon-warning: var(--icons-icon-warning);
+  --color-icons-primary-default: var(--icons-primary-default);
+  --color-icons-primary-hover: var(--icons-primary-hover);
+  --color-icons-primary-pressed: var(--icons-primary-pressed);
+  --color-icons-secondary-default: var(--icons-secondary-default);
+  --color-icons-secondary-hover: var(--icons-secondary-hover);
+  --color-icons-secondary-pressed: var(--icons-secondary-pressed);
+
+  /* Buttons */
+  --color-buttons-disabled-surface: var(--buttons-disabled-surface);
+  --color-buttons-disabled-border: var(--buttons-disabled-border);
+  --color-buttons-disabled-icon: var(--buttons-disabled-icon);
+  --color-buttons-solid-primary-default: var(--buttons-solid-primary-default);
+  --color-buttons-solid-primary-hover: var(--buttons-solid-primary-hover);
+  --color-buttons-solid-primary-pressed: var(--buttons-solid-primary-pressed);
+  --color-buttons-solid-secondary-default: var(--buttons-solid-secondary-default);
+  --color-buttons-solid-secondary-hover: var(--buttons-solid-secondary-hover);
+  --color-buttons-solid-secondary-pressed: var(--buttons-solid-secondary-pressed);
+  --color-buttons-solid-tertiary-default: var(--buttons-solid-tertiary-default);
+  --color-buttons-solid-tertiary-hover: var(--buttons-solid-tertiary-hover);
+  --color-buttons-solid-tertiary-pressed: var(--buttons-solid-tertiary-pressed);
+  --color-buttons-pale-primary-default: var(--buttons-pale-primary-default);
+  --color-buttons-pale-primary-hover: var(--buttons-pale-primary-hover);
+  --color-buttons-pale-primary-pressed: var(--buttons-pale-primary-pressed);
+  --color-buttons-pale-secondary-default: var(--buttons-pale-secondary-default);
+  --color-buttons-pale-secondary-hover: var(--buttons-pale-secondary-hover);
+  --color-buttons-pale-secondary-pressed: var(--buttons-pale-secondary-pressed);
+  --color-buttons-pale-tertiary-default: var(--buttons-pale-tertiary-default);
+  --color-buttons-pale-tertiary-hover: var(--buttons-pale-tertiary-hover);
+  --color-buttons-pale-tertiary-pressed: var(--buttons-pale-tertiary-pressed);
+}
+
+body {
+  background: var(--surface-base-accent);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the layout parts have the correct background colors */
+main {
+  background: var(--surface-base-accent);
+}

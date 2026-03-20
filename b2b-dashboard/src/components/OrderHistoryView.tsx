@@ -167,7 +167,7 @@ export function OrderHistoryView() {
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <span className="text-text-neutral-light">{order.storeName}</span>
-                      <Badge className={cn("shrink-0 text-xs normal-case", STATUS_STYLES[order.status])}>
+                      <Badge className={cn("shrink-0 text-sm normal-case", STATUS_STYLES[order.status])}>
                         {getOrderStatusLabel(order.status, language)}
                       </Badge>
                     </div>
@@ -191,18 +191,18 @@ export function OrderHistoryView() {
                 {order.products.length > 0 && (
                   <>
                     <div className="flex items-center justify-between py-2 px-4 bg-surface-base-accent rounded-lg">
-                      <span className="text-xs font-bold text-text-neutral-light uppercase tracking-wider">{t("product", language)} ({order.products.length})</span>
+                      <span className="text-sm font-bold text-text-neutral-light uppercase tracking-wider">{t("product", language)} ({order.products.length})</span>
                       <span className="text-sm font-bold text-text-neutral-black">{t("total", language)}: {formatPrice(productTotal)} kr</span>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-left border-collapse min-w-[600px]">
                         <thead>
                           <tr className="border-b border-borders-base-base">
-                            <th className="pb-3 pr-4 text-xs font-medium text-text-neutral-light uppercase">{t("product", language)}</th>
-                            <th className="pb-3 pr-4 text-xs font-medium text-text-neutral-light uppercase w-24">NOBB</th>
-                            <th className="pb-3 pr-4 text-xs font-medium text-text-neutral-light uppercase w-20 text-right">{t("qty", language)}</th>
-                            <th className="pb-3 pr-4 text-xs font-medium text-text-neutral-light uppercase w-24 text-right">{t("unitPrice", language)}</th>
-                            <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase w-28 text-right">{t("lineTotal", language)}</th>
+                            <th className="pb-3 pr-4 text-sm font-medium text-text-neutral-light uppercase">{t("product", language)}</th>
+                            <th className="pb-3 pr-4 text-sm font-medium text-text-neutral-light uppercase w-24">NOBB</th>
+                            <th className="pb-3 pr-4 text-sm font-medium text-text-neutral-light uppercase w-20 text-right">{t("qty", language)}</th>
+                            <th className="pb-3 pr-4 text-sm font-medium text-text-neutral-light uppercase w-24 text-right">{t("unitPrice", language)}</th>
+                            <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase w-28 text-right">{t("lineTotal", language)}</th>
                           </tr>
                         </thead>
                         <tbody>

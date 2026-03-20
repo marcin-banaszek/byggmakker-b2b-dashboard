@@ -5,6 +5,7 @@ import { Settings, FileText, MapPin, Calendar, Users } from "lucide-react"
 import { Breadcrumbs, Button, Badge } from "@kesko/ds-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { t } from "@/lib/translations"
+import { LAYOUT_SHELL_CLASS } from "@/lib/layout"
 
 export function ProjectHeader() {
   const { language } = useLanguage()
@@ -16,8 +17,8 @@ export function ProjectHeader() {
   ]
 
   return (
-    <div className="w-full bg-surface-base-base">
-      <div className="max-w-[1600px] mx-auto px-4 lg:px-8 pt-6 pb-2 flex flex-col gap-4">
+    <div className="w-full bg-surface-base-base border-b border-borders-base-base">
+      <div className={`${LAYOUT_SHELL_CLASS} pt-6 pb-2 flex flex-col gap-4`}>
         
         {/* Breadcrumbs */}
         <Breadcrumbs items={breadcrumbs} />

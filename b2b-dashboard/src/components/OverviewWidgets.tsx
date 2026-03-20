@@ -57,7 +57,7 @@ export function OverviewWidgets() {
             
             <div className="pt-4">
               <p className="font-bold text-text-neutral-black mb-2">{t("additionalAddresses", language)}</p>
-              <ol className="list-decimal pl-4 space-y-1 text-xs text-text-neutral-base">
+              <ol className="list-decimal pl-4 space-y-1 text-sm text-text-neutral-base">
                 <li>Nye Drammensvei 999, 8899 Drammen</li>
                 <li>Gode Gamle Drammensvei 895, 8899 Drammen</li>
                 <li>Splitter Nye Drammensvei 123, 8899 Drammen</li>
@@ -269,12 +269,12 @@ export function OverviewWidgets() {
             </div>
 
             <div className="pt-2">
-              <div className="flex justify-between text-xs mb-2">
+              <div className="flex justify-between text-sm mb-2">
                 <span className="text-text-neutral-base">{t("invoicedProgress", language)}</span>
                 <span className="text-text-neutral-base">76.5%</span>
               </div>
               <Progress value={76.5} indicatorClassName="bg-solid-primary-base" className="h-2" />
-              <p className="text-xs text-text-neutral-base mt-2">199,368.25 kr {t("outstanding", language)}</p>
+              <p className="text-sm text-text-neutral-base mt-2">199,368.25 kr {t("outstanding", language)}</p>
             </div>
           </div>
           
@@ -315,7 +315,7 @@ export function OverviewWidgets() {
                 <span className="w-2 h-2 rounded-full bg-status-error flex-shrink-0" />
                 {t("budgetShortfall", language)}
               </p>
-              <p className="text-xs text-text-neutral-base italic">
+              <p className="text-sm text-text-neutral-base italic">
                 {t("budgetShortfallDesc", language)}
               </p>
             </div>

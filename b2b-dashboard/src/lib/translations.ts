@@ -210,6 +210,31 @@ export const translations = {
   createAndAdd: { no: "Opprett og legg til produkter", en: "Create & add products" },
   addToPurchase: { no: "Legg til innkjøp", en: "Add to purchase" },
   close: { no: "Lukk", en: "Close" },
+
+  // Site header (byggmakker.no style)
+  minSide: { no: "Min Side", en: "My account" },
+  shoppingCartHeader: { no: "Handlekurv", en: "Cart" },
+  storeOverview: { no: "Butikkoversikt", en: "Store overview" },
+  campaignsNav: { no: "Kampanjer", en: "Campaigns" },
+  proffNav: { no: "Proff", en: "Pro" },
+  searchRetailPlaceholder: {
+    no: "Søk blant våre 84 000 produkter",
+    en: "Search among our 84,000 products",
+  },
+
+  // Site footer
+  footerTileSupportTitle: { no: "Kundeservice", en: "Customer service" },
+  footerTileSupportDesc: { no: "Vår kundesupport er åpen til 16.00", en: "Our customer support is open until 4 p.m." },
+  footerTileReturnTitle: { no: "60 dagers åpent kjøp", en: "60-day open purchase" },
+  footerTileReturnDesc: { no: "Gjelder uåpnede lagervarer", en: "Applies to unopened stock items" },
+  footerTileDeliveryTitle: { no: "Enkel levering", en: "Easy delivery" },
+  footerTileDeliveryDesc: { no: "Levering tar 2-5 virkedager", en: "Delivery takes 2–5 business days" },
+  footerNewsletterTitle: { no: "Abonner på nyhetsbrevet", en: "Subscribe to the newsletter" },
+  footerNewsletterDesc: {
+    no: "Ved å abonnere på nyhetsbrevet vårt, vil du motta først de beste tilbudene, tipsene og inspirasjoner direkte til din e-post.",
+    en: "By subscribing to our newsletter, you will be the first to receive the best offers, tips and inspiration by email.",
+  },
+  footerNewsletterCta: { no: "Abonner på vårt nyhetsbrev", en: "Subscribe to our newsletter" },
 } as const
 
 export type TranslationKey = keyof typeof translations

@@ -1,6 +1,7 @@
 import * as React from "react"
-import { GlobalHeader } from "@/components/GlobalHeader"
+import { SiteHeaderScroll } from "@/components/SiteHeaderScroll"
 import { ProjectHeader } from "@/components/ProjectHeader"
+import { SiteFooter } from "@/components/SiteFooter"
 import { LanguageProvider } from "@/contexts/LanguageContext"
 import "./globals.css"
 
@@ -16,15 +17,16 @@ export default function DashboardLayout({
 }) {
   return (
     <html lang="en">
-      <body className="theme-byggmakker min-h-screen bg-surface-base-accent flex flex-col font-sans antialiased">
+      <body className="theme-byggmakker min-h-screen bg-surface-base-accent flex flex-col font-sans antialiased text-base">
         <LanguageProvider>
-          <GlobalHeader />
+          <SiteHeaderScroll />
           <ProjectHeader />
           
           {/* Page Content injected here */}
           <main className="flex-1 w-full">
             {children}
           </main>
+          <SiteFooter />
         </LanguageProvider>
       </body>
     </html>

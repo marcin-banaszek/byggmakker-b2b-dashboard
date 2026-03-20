@@ -113,7 +113,7 @@ export function CalculatedMaterialsView() {
             />
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-text-neutral-light hidden sm:inline">
+            <span className="text-sm text-text-neutral-light hidden sm:inline">
               {t("showingMaterials", language)} {MATERIALS.length} {t("ofMaterials", language)} {MATERIALS.length} {t("materialsUnit", language)}
             </span>
             <Button variant="outline" size="sm" className="flex items-center gap-2 h-9">
@@ -164,19 +164,19 @@ export function CalculatedMaterialsView() {
                     aria-label="Select all"
                   />
                 </th>
-                <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase">
+                <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase">
                   {t("productDetails", language)}
                 </th>
-                <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-24 text-right">
+                <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-24 text-right">
                   {t("calculatedQty", language)}
                 </th>
-                <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-24 text-right">
+                <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-24 text-right">
                   {t("orderedQty", language)}
                 </th>
-                <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-[200px]">
+                <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-[200px]">
                   {t("status", language)}
                 </th>
-                <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-44 text-right">
+                <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-44 text-right">
                   {t("action", language)}
                 </th>
               </tr>
@@ -211,7 +211,7 @@ export function CalculatedMaterialsView() {
                           <p className="font-bold text-text-neutral-black text-sm mb-0.5">
                             {material.name}
                           </p>
-                          <p className="text-xs text-text-neutral-light">
+                          <p className="text-sm text-text-neutral-light">
                             NOBB: {material.nobb}{" "}
                             <span className="mx-1.5">•</span> {material.category}
                           </p>
@@ -223,7 +223,7 @@ export function CalculatedMaterialsView() {
                         <span className="font-bold text-text-neutral-black">
                           {material.calculatedQty}
                         </span>
-                        <span className="text-xs text-text-neutral-light">{material.unit}</span>
+                        <span className="text-sm text-text-neutral-light">{material.unit}</span>
                       </div>
                     </td>
                     <td className="p-4 text-right">
@@ -239,17 +239,17 @@ export function CalculatedMaterialsView() {
                       >
                         {material.orderedQty}
                       </span>
-                      <span className="text-xs text-text-neutral-light ml-1">{material.unit}</span>
+                      <span className="text-sm text-text-neutral-light ml-1">{material.unit}</span>
                     </td>
                     <td className="p-4">
                       {pct === 100 ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-helpers-success text-status-success">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-sm font-medium bg-surface-helpers-success text-status-success">
                           <span className="w-1.5 h-1.5 rounded-full bg-status-success" />
                           {t("completed", language)}
                         </span>
                       ) : pct > 0 ? (
                         <div className="w-full max-w-[140px] space-y-1">
-                          <div className="flex justify-between items-center text-xs font-medium">
+                          <div className="flex justify-between items-center text-sm font-medium">
                             <span className="text-status-warning">{remaining} {material.unit} {t("remaining", language)}</span>
                             <span className="text-text-neutral-light">{pct}%</span>
                           </div>
@@ -260,7 +260,7 @@ export function CalculatedMaterialsView() {
                           />
                         </div>
                       ) : (
-                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-status-error">
+                        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-status-error">
                           <span className="w-1.5 h-1.5 rounded-full bg-status-error" />
                           {t("notStarted", language)}
                         </span>
@@ -271,7 +271,7 @@ export function CalculatedMaterialsView() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="h-8 px-3 text-xs font-bold border-borders-base-disabled text-text-neutral-disabled cursor-not-allowed"
+                          className="h-8 px-3 text-sm font-bold border-borders-base-disabled text-text-neutral-disabled cursor-not-allowed"
                           disabled
                         >
                           {t("fullyStocked", language)}
@@ -280,7 +280,7 @@ export function CalculatedMaterialsView() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="h-8 px-3 text-xs font-bold text-solid-primary-base hover:bg-surface-primary-base"
+                          className="h-8 px-3 text-sm font-bold text-solid-primary-base hover:bg-surface-primary-base"
                           onClick={() => {
                             setSelectedIds(new Set([material.id]))
                             setModalOpen(true)
@@ -317,7 +317,7 @@ export function CalculatedMaterialsView() {
           </div>
           <div>
             <p className="text-sm font-bold text-text-neutral-black">{t("bimSynced", language)}</p>
-            <p className="text-xs text-text-helpers-info">
+            <p className="text-sm text-text-helpers-info">
               {t("bimSyncedDesc", language)}
             </p>
           </div>

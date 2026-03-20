@@ -8,6 +8,7 @@ import { Button, Checkbox, Card, Badge } from "@kesko/ds-react"
 import { BYGGMAKKER_PRODUCTS } from "@/data/byggmakker-products"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { t } from "@/lib/translations"
+import { LAYOUT_SHELL_CLASS } from "@/lib/layout"
 
 const PRODUCT_LIST = BYGGMAKKER_PRODUCTS.slice(0, 3).map((p, i) => {
   const qty = [2, 1, 4][i] as number
@@ -52,8 +53,8 @@ export function ProductsView() {
           <div className="p-4 bg-surface-base-accent border-b border-borders-base-base flex items-center justify-between">
             <h3 className="text-sm font-bold text-text-neutral-black uppercase tracking-wider">{t("projectProductNeeds", language)}</h3>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-text-neutral-light font-medium">{selectedIds.size} {t("itemsSelected", language)}</span>
-              <Button variant="ghost" size="sm" className="text-xs font-bold text-solid-primary-base p-0 h-auto" onClick={clearSelection}>{t("clearSelection", language)}</Button>
+              <span className="text-sm text-text-neutral-light font-medium">{selectedIds.size} {t("itemsSelected", language)}</span>
+              <Button variant="ghost" size="sm" className="text-sm font-bold text-solid-primary-base p-0 h-auto" onClick={clearSelection}>{t("clearSelection", language)}</Button>
             </div>
           </div>
           
@@ -64,10 +65,10 @@ export function ProductsView() {
                   <th className="p-4 w-10 text-center">
                     <Checkbox checked={allSelected} onChange={selectAll} aria-label="Select all" />
                   </th>
-                  <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase">{t("product", language)}</th>
-                  <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-32 text-right">{t("price", language)}</th>
-                  <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-32 text-center">{t("qty", language)}</th>
-                  <th className="p-4 text-xs font-medium tracking-wider text-text-neutral-light uppercase w-32 text-right">{t("total", language)}</th>
+                  <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase">{t("product", language)}</th>
+                  <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-32 text-right">{t("price", language)}</th>
+                  <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-32 text-center">{t("qty", language)}</th>
+                  <th className="p-4 text-sm font-medium tracking-wider text-text-neutral-light uppercase w-32 text-right">{t("total", language)}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-borders-base-base">
@@ -90,7 +91,7 @@ export function ProductsView() {
                         <div>
                           <p className="font-bold text-text-neutral-black leading-tight mb-1">{product.name}</p>
                           <div className="flex items-center gap-2">
-                            <span className="text-xs text-text-neutral-light">SKU: {product.sku}</span>
+                            <span className="text-sm text-text-neutral-light">SKU: {product.sku}</span>
                             <Badge variant="outline" className="border-status-info bg-surface-helpers-info text-status-info normal-case tracking-normal font-semibold">{product.discount}</Badge>
                           </div>
                         </div>
@@ -98,7 +99,7 @@ export function ProductsView() {
                     </td>
                     <td className="p-4 text-right">
                       <p className="font-bold text-text-neutral-black">{product.price}</p>
-                      <p className="text-xs text-text-neutral-light">{t("exVat", language)}</p>
+                      <p className="text-sm text-text-neutral-light">{t("exVat", language)}</p>
                     </td>
                     <td className="p-4">
                       <div className="flex items-center justify-center gap-3">
@@ -109,7 +110,7 @@ export function ProductsView() {
                     </td>
                     <td className="p-4 text-right">
                       <p className="font-bold text-text-neutral-black">{product.total}</p>
-                      <p className="text-xs text-status-success font-medium">{t("saving", language)} 15%</p>
+                      <p className="text-sm text-status-success font-medium">{t("saving", language)} 15%</p>
                     </td>
                   </tr>
                 ))}
@@ -126,9 +127,9 @@ export function ProductsView() {
           <div className="flex-1">
             <div className="flex items-center justify-between mb-1">
               <h4 className="text-sm font-bold text-text-neutral-black">{t("returnsPending", language)}</h4>
-              <Button variant="ghost" size="sm" className="text-xs font-bold text-text-neutral-base p-0 h-auto">{t("history", language)}</Button>
+              <Button variant="ghost" size="sm" className="text-sm font-bold text-text-neutral-base p-0 h-auto">{t("history", language)}</Button>
             </div>
-            <p className="text-xs text-text-neutral-base leading-relaxed max-w-2xl">
+            <p className="text-sm text-text-neutral-base leading-relaxed max-w-2xl">
               {t("returnsDesc", language)}
             </p>
           </div>
@@ -138,22 +139,22 @@ export function ProductsView() {
 
       {/* Cart Footer */}
       <div className="fixed bottom-0 left-0 right-0 bg-surface-base-base/80 backdrop-blur-md border-t border-borders-base-base p-6 z-40 shadow-lg">
-        <div className="max-w-[1600px] mx-auto flex items-center justify-between">
+        <div className={`${LAYOUT_SHELL_CLASS} flex items-center justify-between`}>
           <div className="flex items-center gap-10">
             <div className="flex flex-col">
-              <span className="text-xs text-text-neutral-light mb-1">{t("totalProjectPrice", language)}</span>
+              <span className="text-sm text-text-neutral-light mb-1">{t("totalProjectPrice", language)}</span>
               <span className="text-3xl font-bold text-text-neutral-black tracking-tight flex items-baseline gap-2">
                 NOK 7,313 
-                <span className="text-xs font-medium text-text-neutral-light">{t("exVat", language)}</span>
+                <span className="text-sm font-medium text-text-neutral-light">{t("exVat", language)}</span>
               </span>
             </div>
             <div className="h-10 w-[1px] bg-borders-base-base hidden md:block" />
             <div className="hidden md:flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-xs">
+              <div className="flex items-center gap-2 text-sm">
                 <CreditCard className="w-3.5 h-3.5 text-status-info" />
                 <span className="text-text-neutral-base">{t("limit", language)}: <span className="font-bold text-text-neutral-black">250,000</span></span>
               </div>
-              <div className="flex items-center gap-2 text-xs">
+              <div className="flex items-center gap-2 text-sm">
                 <Receipt className="w-3.5 h-3.5 text-status-success" />
                 <span className="text-text-neutral-base">{t("discount", language)}: <span className="font-bold text-text-neutral-black">-12.5%</span></span>
               </div>

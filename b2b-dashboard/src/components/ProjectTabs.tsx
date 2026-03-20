@@ -1,5 +1,6 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import { LAYOUT_SHELL_CLASS } from "@/lib/layout"
 
 export interface TabItem {
   id: string
@@ -17,16 +18,16 @@ interface ProjectTabsProps {
 export function ProjectTabs({ tabs, activeTab, onTabChange, className }: ProjectTabsProps) {
   return (
     <div className={cn("w-full border-b border-borders-base-base bg-surface-base-base", className)}>
-      <div className="max-w-[1600px] mx-auto px-4 lg:px-8 flex items-center overflow-x-auto hide-scrollbar">
+      <div className={`${LAYOUT_SHELL_CLASS} flex items-center overflow-x-auto hide-scrollbar`}>
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
             className={cn(
-              "px-6 py-4 text-sm font-normal flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors",
+              "px-6 py-4 text-base font-normal flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors",
               activeTab === tab.id
                 ? "border-solid-primary-base text-solid-primary-base"
-                : "border-transparent text-text-neutral-light hover:text-text-neutral-black hover:border-borders-base-hover"
+                : "border-transparent text-text-neutral-black hover:text-solid-primary-base hover:border-borders-base-hover"
             )}
           >
             {tab.icon && (

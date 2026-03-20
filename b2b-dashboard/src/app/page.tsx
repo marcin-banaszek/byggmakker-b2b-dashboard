@@ -23,6 +23,7 @@ import { OrderHistoryView } from "@/components/OrderHistoryView"
 import { DocumentsView } from "@/components/DocumentsView"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { t } from "@/lib/translations"
+import { LAYOUT_SHELL_CLASS } from "@/lib/layout"
 
 // Define the available application views
 type ViewState = 'overview' | 'materials' | 'products' | 'planned' | 'history' | 'documents'
@@ -45,7 +46,7 @@ export default function DashboardPage() {
       
       {/* Top KPI Widgets */}
       <div className="w-full bg-surface-base-base">
-        <div className="max-w-[1600px] mx-auto px-4 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className={`${LAYOUT_SHELL_CLASS} py-6 grid grid-cols-1 md:grid-cols-3 gap-6`}>
           <ProgressWidget 
           title={t("totalBudgetSpent", language)}
           icon={<TrendingUp className="w-4 h-4 text-status-error" />}
@@ -103,7 +104,7 @@ export default function DashboardPage() {
       />
 
       {/* Main Content Area based on active view */}
-      <div className="px-4 lg:px-8 py-8 w-full max-w-[1600px] mx-auto">
+      <div className={`${LAYOUT_SHELL_CLASS} py-8 w-full`}>
         
         {activeView === 'overview' && (
           <div className="animate-in fade-in duration-300">

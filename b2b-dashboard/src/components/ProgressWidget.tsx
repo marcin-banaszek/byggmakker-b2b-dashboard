@@ -62,7 +62,7 @@ export function ProgressWidget({
             />
             
             {(progressLabelLeft || progressLabelRight) && (
-              <div className="flex justify-between items-center text-xs text-text-neutral-light">
+              <div className="flex justify-between items-center text-sm text-text-neutral-light">
                 <span>{progressLabelLeft}</span>
                 <span>{progressLabelRight}</span>
               </div>

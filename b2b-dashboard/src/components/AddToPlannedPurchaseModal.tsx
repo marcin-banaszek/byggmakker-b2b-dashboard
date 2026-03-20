@@ -159,7 +159,7 @@ export function AddToPlannedPurchaseModal({
                 {successPayload.productCount} {t("productsAddedDesc", language)} &apos;{successPayload.listLabel}&apos;.
               </p>
               <Card className="p-4 text-left bg-surface-base-accent border border-borders-base-base">
-                <p className="text-xs font-bold text-text-neutral-light uppercase tracking-wider mb-3">{t("summary", language)}</p>
+                <p className="text-sm font-bold text-text-neutral-light uppercase tracking-wider mb-3">{t("summary", language)}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-text-neutral-light">{t("purchaseList", language)}</span>
@@ -281,13 +281,13 @@ export function AddToPlannedPurchaseModal({
                         </div>
                       ) : (
                         <div className="w-12 h-12 rounded border border-borders-base-base bg-surface-base-base flex items-center justify-center flex-shrink-0 text-icons-nautral-light">
-                          <span className="text-xs font-bold text-text-neutral-light">IMG</span>
+                          <span className="text-sm font-bold text-text-neutral-light">IMG</span>
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
                         <p className="font-bold text-text-neutral-black text-sm truncate">{m.name}</p>
-                        <p className="text-xs text-text-neutral-light">NOBB: {m.nobb}</p>
-                        <p className="text-xs font-medium text-text-neutral-base mt-0.5">
+                        <p className="text-sm text-text-neutral-light">NOBB: {m.nobb}</p>
+                        <p className="text-sm font-medium text-text-neutral-base mt-0.5">
                           {formatPrice(m.pricePerUnit)} kr/{formatUnit(m.unit)}
                         </p>
                       </div>

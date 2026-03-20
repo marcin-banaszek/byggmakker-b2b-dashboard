@@ -125,7 +125,7 @@ export function PlannedPurchasesView() {
               <div className="flex flex-col items-center gap-1.5 relative z-10">
                 <div
                   className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center border-2 text-xs font-bold",
+                    "w-8 h-8 rounded-full flex items-center justify-center border-2 text-sm font-bold",
                     m.status === "completed" && "bg-status-success border-surface-helpers-success text-text-neutral-white",
                     m.status === "klar" && "bg-surface-base-base border-status-warning text-status-warning",
                     m.status === "utkast" && "bg-surface-base-base border-surface-base-pressed text-text-neutral-disabled",
@@ -140,12 +140,12 @@ export function PlannedPurchasesView() {
                   {m.status === "pending" && (m.icon === "flag" ? "🏁" : <span className="w-2 h-2 rounded-full bg-current" />)}
                 </div>
                 <div className="text-center">
-                  <p className="text-xs font-bold text-text-neutral-black">{m.label}</p>
-                  {m.week && <p className="text-xs text-text-neutral-light">{m.week}</p>}
-                  {m.status === "klar" && <Badge className={cn("text-xs px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.klar)}>{t("klarTilBestilling", language)}</Badge>}
-                  {m.status === "utkast" && <Badge className={cn("text-xs px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.utkast)}>{t("utkast", language)}</Badge>}
-                  {m.status === "delvis" && <Badge className={cn("text-xs px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.delvis)}>{t("delvisBestilt", language)}</Badge>}
-                  {m.status === "bestilt" && <Badge className={cn("text-xs px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.bestilt)}>{t("bestilt", language)}</Badge>}
+                  <p className="text-sm font-bold text-text-neutral-black">{m.label}</p>
+                  {m.week && <p className="text-sm text-text-neutral-light">{m.week}</p>}
+                  {m.status === "klar" && <Badge className={cn("text-sm px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.klar)}>{t("klarTilBestilling", language)}</Badge>}
+                  {m.status === "utkast" && <Badge className={cn("text-sm px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.utkast)}>{t("utkast", language)}</Badge>}
+                  {m.status === "delvis" && <Badge className={cn("text-sm px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.delvis)}>{t("delvisBestilt", language)}</Badge>}
+                  {m.status === "bestilt" && <Badge className={cn("text-sm px-1.5 py-0 mt-0.5 normal-case", STATUS_STYLES.bestilt)}>{t("bestilt", language)}</Badge>}
                 </div>
               </div>
               {i < MILESTONES.length - 1 && (
@@ -159,7 +159,7 @@ export function PlannedPurchasesView() {
           <div className="bg-status-warning flex-[2]" />
           <div className="bg-surface-base-pressed flex-[4]" />
         </div>
-        <p className="text-xs text-text-neutral-light mt-2">{t("todayDate", language)} 9 mars 2026</p>
+        <p className="text-sm text-text-neutral-light mt-2">{t("todayDate", language)} 9 mars 2026</p>
       </Card>
 
       {/* Search & Filters */}
@@ -207,11 +207,11 @@ export function PlannedPurchasesView() {
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-bold text-text-neutral-black truncate">{list.title}</span>
-                      <Badge className={cn("shrink-0 text-xs normal-case", STATUS_STYLES[list.status])}>
+                      <Badge className={cn("shrink-0 text-sm normal-case", STATUS_STYLES[list.status])}>
                         {getStatusLabel(list.status)}
                       </Badge>
                     </div>
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-0.5 mt-1 text-xs text-text-neutral-light">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-0.5 mt-1 text-sm text-text-neutral-light">
                       <span className="flex items-center gap-1">
                         <User className="w-3.5 h-3.5" />
                         {list.owner}
@@ -242,11 +242,11 @@ export function PlannedPurchasesView() {
                 <table className="w-full text-left border-collapse min-w-[500px]">
                   <thead>
                     <tr className="border-b border-borders-base-base">
-                      <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase">{t("product", language)}</th>
-                      <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase w-28">NOBB</th>
-                      <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase w-24 text-right">{t("antall", language)}</th>
-                      <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase w-24 text-right">{t("enhetspris", language)}</th>
-                      <th className="pb-3 text-xs font-medium text-text-neutral-light uppercase w-28 text-right">{t("sum", language)}</th>
+                      <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase">{t("product", language)}</th>
+                      <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase w-28">NOBB</th>
+                      <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase w-24 text-right">{t("antall", language)}</th>
+                      <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase w-24 text-right">{t("enhetspris", language)}</th>
+                      <th className="pb-3 text-sm font-medium text-text-neutral-light uppercase w-28 text-right">{t("sum", language)}</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -7,6 +7,7 @@ import { Card, Checkbox, Button } from "@kesko/ds-react"
 import { getProductsForDocuments } from "@/data/byggmakker-products"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { t } from "@/lib/translations"
+import { LAYOUT_SHELL_CLASS } from "@/lib/layout"
 
 const DOC_PRODUCTS = getProductsForDocuments()
 
@@ -77,21 +78,21 @@ export function DocumentsView() {
                   <div className="w-12 h-12 rounded border border-borders-base-base bg-surface-base-accent flex items-center justify-center text-icons-nautral-base mb-3">
                     <FileText className="w-6 h-6" />
                   </div>
-                  <p className="text-xs font-medium text-text-neutral-light mb-1">{product.nobb}</p>
+                  <p className="text-sm font-medium text-text-neutral-light mb-1">{product.nobb}</p>
                   <p className="text-sm font-bold text-text-neutral-black mb-3 line-clamp-2">{product.name}</p>
                   {product.badges && product.badges.length > 0 ? (
                     <div className="flex flex-wrap gap-1">
                       {product.badges.map((b) => (
                         <span
                           key={b}
-                          className="px-2 py-0.5 rounded text-xs font-medium bg-solid-primary-base text-text-neutral-white uppercase"
+                          className="px-2 py-0.5 rounded text-sm font-medium bg-solid-primary-base text-text-neutral-white uppercase"
                         >
                           {b}
                         </span>
                       ))}
                     </div>
                   ) : (
-                    <p className="text-xs text-text-neutral-light">{t("noDocumentation", language)}</p>
+                    <p className="text-sm text-text-neutral-light">{t("noDocumentation", language)}</p>
                   )}
                 </div>
               </div>
@@ -103,7 +104,7 @@ export function DocumentsView() {
       {/* Sticky Footer Action Bar */}
       {selectedIds.size > 0 && (
         <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface-base-base border-t border-borders-base-base shadow-lg">
-          <div className="max-w-[1600px] mx-auto px-4 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className={`${LAYOUT_SHELL_CLASS} py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4`}>
             <div className="flex flex-wrap items-center gap-4">
               <select
                 value={docType}
